@@ -51,7 +51,7 @@ function Home() {
       <div className="content__items">
         {isLoaded 
           ? items.map((obj) => (
-            <PizzaBlock addedCount={cartItems[obj.id] && cartItems[obj.id].length} onAddPizza={onAddPizza} key={obj.id} {...obj}/>
+            <PizzaBlock addedCount={cartItems[obj.id] && cartItems[obj.id].items.length} onAddPizza={onAddPizza} key={obj.id} {...obj}/>
           ))
           : Array(12)
           .fill(0)
